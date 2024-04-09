@@ -1,3 +1,4 @@
+// Home Module
 function home()
 {
     let homeDiv;
