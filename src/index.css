@@ -1,13 +1,18 @@
-.content
+#content
 {
-    color:red;
+    background-color: #d5e547;
 }
 
 h1{
     color:green;
 }
 
-#Menu, #Home
+/* #Menu, #Home
 {
 font-size:20px;
+} */
+
+p
+{
+    font-size: 2rem;
 }

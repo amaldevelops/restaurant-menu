@@ -1,6 +1,9 @@
 import './index.css';
 import image from './restaurant.jpg';
+import {menuGenerate} from './menu.js'; 
+import {home} from './home.js';
 console.log("This Works A+++");
+
 
     const content=document.querySelector("#content");
     const heading=document.createElement("h1");
@@ -9,10 +12,11 @@ console.log("This Works A+++");
     
     const banner=document.createElement("img");
     banner.src=image;
-    // <img src={restaurant.jpg}/>
 
     banner.alt="Star Trek Banner";
     content.appendChild(banner);
+
+    home();
 
 // ********** Home **********
 
@@ -20,11 +24,28 @@ document.querySelector("#Home").addEventListener('click',function(){
     home();
 });
 
+document.querySelector("#Menu").addEventListener('click',function(){
+    menuGenerate();
+});
+
+function resetScreen()
+{
+    // content.removeChild(menuDiv); 
+    // content.remove();
+    // content.style.display = 'none';
+
+    
+    // location.reload();
+
+    // 
+
+}
+
+/*
 function home()
 {
-    // content.removeChild(menuDiv);    
 
-    const homeDiv=document.createElement("div");
+    homeDiv=document.createElement("div");
     homeDiv.setAttribute('id', 'homeDiv');
     content.appendChild(homeDiv);
     
@@ -41,17 +62,29 @@ function home()
     OpenTimesHeading.textContent="Opening Times";
     homeDiv.appendChild(OpenTimesHeading);
     
-    const openTimes = document.createElement("p");
-    openTimes.textContent="Sunday: 8am - 8pm <br> Monday: 6am - 6pm <br> Tuesday: 6am - 6pm <br> Wednesday: 6am - 6pm <br> Thursday: 6am - 10pm <br> Friday: 6am - 10pm <br> Saturday: 8am - 10pm";
-    homeDiv.appendChild(openTimes);
-    
+    const openTimesList=["Sunday: 8am - 8pm", "Monday: 6am - 6pm", "Tuesday: 6am - 6pm", "Wednesday: 6am - 6pm", "Thursday: 6am - 10pm", "Friday: 6am - 10pm","Saturday: 8am - 10pm"
+    ];
+
+    openTimesList.forEach(times=>{
+        const openTimes = document.createElement("p");
+        openTimes.textContent=times;
+        homeDiv.appendChild(openTimes);
+
+    });
+
+   
     const location=document.createElement("h1");
     location.textContent="Location: 10 Bourke Street, Melbourne";
     homeDiv.appendChild(location);
 
+    resetScreen()
+
+
 }
 
+*/
 
+/*
 //***************** Menu *****************
 
 
@@ -63,7 +96,7 @@ function menuGenerate ()
 {
     content.removeChild(homeDiv);
 
-    const menuDiv=document.createElement("div");
+    menuDiv=document.createElement("div");
     menuDiv.setAttribute('id','menuDiv');
     content.appendChild(menuDiv);
 
@@ -101,4 +134,4 @@ menuItems.forEach(item => {
 
 }
 
-
+*/
