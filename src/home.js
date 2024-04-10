@@ -33,7 +33,7 @@ function home()
 
    
     const location=document.createElement("h1");
-    location.textContent="Location: 10 Bourke Street, Melbourne";
+    location.textContent="Location: 00000000 Bourke Street, Melbourne";
     homeDiv.appendChild(location);
 
 
