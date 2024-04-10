@@ -1,6 +1,7 @@
-// Home Module
+// Home Screen Module
 function home()
 {
+       
     let homeDiv;
 
     homeDiv=document.createElement("div");
@@ -35,7 +36,6 @@ function home()
     location.textContent="Location: 10 Bourke Street, Melbourne";
     homeDiv.appendChild(location);
 
-    // resetScreen()
 
 
 }

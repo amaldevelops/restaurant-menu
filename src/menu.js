@@ -1,12 +1,9 @@
 //***************** Menu Module *****************
 
-
 function menuGenerate ()
 {
-    
+        
     let menuDiv;
-
-    content.removeChild(homeDiv);
 
     menuDiv=document.createElement("div");
     menuDiv.setAttribute('id','menuDiv');
@@ -29,21 +26,15 @@ function menuGenerate ()
 
     ]
 
-
-
 const menu=document.createElement("ol");
-
 
 menuItems.forEach(item => {
     const li = document.createElement('li');
     li.textContent = item;
-    // Append <li> to <ol>
+// Append <li> to <ol>
     menu.appendChild(li);
     menuDiv.appendChild(menu);
 
-});
-
-
-}
+})};
 
 export {menuGenerate};

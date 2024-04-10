@@ -1,40 +1,24 @@
+// Main ES6 Module that will be used by Webpack to generate the website
+
 import './index.css';
-import image from './restaurant.jpg';
 import {menuGenerate} from './menu.js'; 
 import {home} from './home.js';
+import {header} from './header.js';
+import { updateScreen } from './updateScreen.js';
 console.log("This Works A+++");
 
-
 const content=document.querySelector("#content");
-const heading=document.createElement("h1");
-heading.textContent="Welcome To StarTrek restaurant, Melbourne";
-content.appendChild(heading);
-    
-const banner=document.createElement("img");
-banner.src=image;
 
-banner.alt="Star Trek Banner";
-content.appendChild(banner);
-
+header();
 home();
 
+
 document.querySelector("#Home").addEventListener('click',function(){
+    updateScreen();
     home();
 });
 
 document.querySelector("#Menu").addEventListener('click',function(){
+    updateScreen();
     menuGenerate();
 });
-
-function resetScreen()
-{
-    // content.removeChild(menuDiv); 
-    // content.remove();
-    // content.style.display = 'none';
-
-    
-    // location.reload();
-
-    // 
-
-}
